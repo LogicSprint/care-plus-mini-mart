@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <title>Care+ Mart · USA origin health & beauty</title>
+  <!-- external CSS -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Sticky Navbar with logo image -->
+  <nav class="navbar">
+    <div class="logo-area">
+      <!-- place your 'care plus logo.png' in the same folder -->
+      <img src="images/care plus logo.png" alt="Care+ Mart logo" class="logo">
+    </div>
+    <div class="nav-menu">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#wall">Wall of Fame</a></li>
+        <li><a href="#delivery">Delivery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="order-nav-btn" id="navOrderBtn"><i class="fas fa-shopping-cart"></i> Order Now</button>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Menu">☰</button>
+    </div>
+  </nav>
+
+  <main>
+    <!-- HERO section with Unsplash image -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <h1>Care+ Mart<br><span style="color: var(--primary-light-orange);">USA origin</span></h1>
+          <div class="hero-slogan">Original USA Health & Beauty Products Delivered in Ethiopia</div>
+          <div class="btn-group">
+            <button class="btn btn-primary" id="heroShopBtn">Shop Now</button>
+            <button class="btn btn-outline" id="heroContactBtn">Contact Us</button>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="https://images.unsplash.com/photo-1596462502278-6a8d6c1c6b1f?w=600&auto=format&fit=crop" alt="Luxury skincare and cosmetics" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- Products section (grid populated by JS with Unsplash images) -->
+    <section id="products">
+      <div class="container">
+        <div class="section-header">
+          <h2>Featured & new arrivals</h2>
+          <p>Fresh from USA • vitamins • cosmetics • supplements</p>
+        </div>
+        <div class="product-grid" id="productGrid"></div>
+      </div>
+    </section>
+
+    <!-- Why Choose Care+ Mart -->
+    <section style="background: var(--soft-beige);">
+      <div class="container">
+        <div class="section-header"><h2>Why Choose Care+ Mart</h2></div>
+        <div class="features-grid">
+          <div class="feature-item"><i class="fas fa-flag-usa"></i><h4>Original USA products</h4><p>Sourced directly, sealed & genuine</p></div>
+          <div class="feature-item"><i class="fas fa-check-circle"></i><h4>Trusted quality</h4><p>Authenticity guaranteed</p></div>
+          <div class="feature-item"><i class="fas fa-truck"></i><h4>House to house delivery</h4><p>Doorstep service</p></div>
+          <div class="feature-item"><i class="fas fa-money-bill-wave"></i><h4>Pay on delivery</h4><p>Cash after inspection</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Wall of Fame (carousel) with Unsplash avatars -->
+    <section id="wall">
+      <div class="container">
+        <div class="section-header"><h2>Wall of Fame</h2><p>Happy customers in Ethiopia</p></div>
+        <div class="carousel" id="testimonialCarousel"></div>
+      </div>
+    </section>
+
+    <!-- Delivery Info explicit -->
+    <section id="delivery">
+      <div class="container">
+        <div class="section-header"><h2>Delivery & Payment</h2></div>
+        <div class="delivery-panel">
+          <div><i class="fas fa-home" style="color: var(--soft-gold);"></i> <h3>House to house</h3><p>We deliver personally to your door</p></div>
+          <div><i class="fas fa-hand-holding-usd" style="color: var(--soft-gold);"></i> <h3>Cash on delivery</h3><p>Pay when you receive, fee applies</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section>
+      <div class="container newsletter">
+        <h2>New product alerts</h2>
+        <p>Get notified about USA arrivals & promotions</p>
+        <div class="newsletter-form">
+          <input type="email" placeholder="Your email" id="newsEmail">
+          <button id="subscribeBtn"><i class="fab fa-telegram"></i> Subscribe</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <div class="container footer-grid">
+      <div>
+        <h4>Care+ Mart</h4>
+        <p><i class="fas fa-envelope"></i> careplus@example.com</p>
+        <p><i class="fab fa-instagram"></i> @careplus.eth</p>
+        <p><i class="fab fa-telegram"></i> t.me/careplus</p>
+      </div>
+      <div>
+        <h4>Quick links</h4>
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#wall">Reviews</a>
+      </div>
+      <div>
+        <h4>Delivery info</h4>
+        <p>Addis Ababa & regions</p>
+        <p>2-3 business days</p>
+        <p>Cash on delivery (+5% fee)</p>
+      </div>
+    </div>
+    <div class="container" style="text-align: center; margin-top: 3rem;">© Care+ Mart — original USA products in Ethiopia</div>
+  </footer>
+
+  <!-- Order Modal -->
+  <div id="orderModal" class="modal">
+    <div class="modal-card">
+      <h3>Complete your order</h3>
+      <form id="modalForm">
+        <label>Full name</label>
+        <input type="text" id="modalName" placeholder="Abebe Kebede" required>
+        <label>Phone (Ethiopia)</label>
+        <input type="tel" id="modalPhone" placeholder="+251 91 234 5678" required>
+        <label>Address</label>
+        <input type="text" id="modalAddress" placeholder="House / street">
+        <label>Product name</label>
+        <input type="text" id="modalProduct" readonly value="Product will appear">
+        <label>Quantity</label>
+        <input type="number" id="modalQty" value="1" min="1">
+        <div class="modal-actions">
+          <button type="button" class="btn btn-primary" id="sendOrderBtn">Send order</button>
+          <button type="button" class="btn btn-outline" id="closeModalBtn">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast notification -->
+  <div id="toastMessage" class="toast"></div>
+
+  <!-- external JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
